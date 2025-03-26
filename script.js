@@ -23,14 +23,14 @@ async function setCountdown() {
     let futureTime = new Date(inputElement.value)
     inputElement.value = ""
 
-    if (futureTime.getTime() < 0) {
+    if (getRemainingTime(futureTime) < 0) {
         alert("Atenção! Você só pode usar tempos futuros!")
         return
     }
     
     document.body.firstElementChild.remove()
 
-    while (true) {
+    while (getRemainingTime(futureTime) >= 0) {
         var time = getRemainingTime(futureTime)
         getTimeDiv("days").innerHTML = (time / 86400000)|0
         time %= 86400000
