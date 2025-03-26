@@ -65,6 +65,7 @@ p {
 
     #countdown-div {
         flex-flow: column;
-        gap: 1rem;
+        gap: 2rem;
+        margin: 14vw auto;
     }
 }
