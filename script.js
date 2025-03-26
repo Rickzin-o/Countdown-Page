@@ -22,6 +22,11 @@ async function setCountdown() {
 
     let futureTime = new Date(inputElement.value)
     inputElement.value = ""
+
+    if (futureTime.getTime() < 0) {
+        alert("Atenção! Você só pode usar tempos futuros!")
+        return
+    }
     
     document.body.firstElementChild.remove()
 
